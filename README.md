@@ -3,7 +3,7 @@
 **An Analog Electronics Project | Signal Processing | Infrared Communication**
 
 <p align="center">
-  <img src="images/project-cover.jpg" alt="Infrared Frequency Discrimination Project" width="850">
+  <img src="photo_2026-10-30_17-27-54.jpg" alt="Infrared Frequency Discrimination Project" width="850">
 </p>
 
 <p align="center">
@@ -173,13 +173,13 @@ The next verification stage consists of testing the complete optical transmissio
 
 An overview of the communication concept and its frequency-based operating principle.
 
-![Project concept](images/project-concept.jpg)
+![Project concept](Screenshot 2026-10-30 172940.png)
 
 ### 7.2 Circuit Schematic
 
 The electronic circuit was designed and documented using KiCad.
 
-![KiCad schematic](images/kicad-schematic.png)
+![KiCad schematic](Screenshot 2026-08-11 185917.png)
 
 **Design files:** [`hardware/`](hardware/)
 
