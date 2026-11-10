@@ -1,3 +1,4 @@
+
 # Infrared Communication Using Frequency Discrimination
 
 **An Analog Electronics Project | Signal Processing | Infrared Communication**
@@ -54,37 +55,37 @@ This allows two different commands to be distinguished using a single infrared t
 ## 3. System Architecture
 
 ```text
-              TRANSMITTER
-        ┌──────────────────────┐
-        │  Low-Frequency       │
-        │  Oscillator (~299 Hz)│
-        └──────────┬───────────┘
-                   │
-              Push Button
-                   │
-        ┌──────────┴───────────┐
-        │  High-Frequency      │
-        │  Oscillator (~12 kHz)│
-        └──────────┬───────────┘
-                   │
-             Transistor Driver
-                   │
-              IR LED
-                   │
-           Infrared Optical Link
-                   │
-              IR Receiver
-                   │
-        Signal Conditioning Stage
-                   │
-             ┌─────┴─────┐
-             │           │
-         Low-Pass     High-Pass
-          Filter       Filter
-             │           │
-         Output 1     Output 2
-             │           │
-          LED 1        LED 2
+             TRANSMITTER
+       ┌──────────────────────┐
+       │  Low-Frequency       │
+       │  Oscillator (~299 Hz)│
+       └──────────┬───────────┘
+                  │
+             Push Button
+                  │
+       ┌──────────┴───────────┐
+       │  High-Frequency      │
+       │  Oscillator (~12 kHz)│
+       └──────────┬───────────┘
+                  │
+            Transistor Driver
+                  │
+             IR LED
+                  │
+          Infrared Optical Link
+                  │
+             IR Receiver
+                  │
+       Signal Conditioning Stage
+                  │
+           ┌──────┴──────┐
+           │             │
+       Low-Pass       High-Pass
+        Filter         Filter
+           │             │
+       Output 1       Output 2
+           │             │
+        LED 1          LED 2
 ```
 
 ## 4. Circuit Design
@@ -100,7 +101,6 @@ The circuit is designed around the following functional blocks:
 | Low-pass filter | Op-amp, resistors, capacitors | Detect the lower-frequency channel |
 | High-pass filter | Op-amp, resistors, capacitors | Detect the higher-frequency channel |
 | Indicators | LEDs and current-limiting resistors | Display the detected command |
-
 
 ### Oscillator Design
 
@@ -147,6 +147,46 @@ The cutoff frequencies must be selected to separate the two operating frequencie
 
 The use of active filters also provides the possibility of signal amplification and buffering.
 
+**Design files:** [`hardware/`](hardware/)
+
+## 5. Hardware Implementation
+
+The circuits were initially assembled and tested on a breadboard.
+
+The experimental setup includes the oscillator circuits, infrared transmitter and receiver, signal-conditioning stages, and output indicators.
+
+The project focuses on understanding the behavior of each functional block and verifying the frequency discrimination principle through practical measurements.
+
+## 6. Experimental Results
+
+The oscillator frequencies were measured using a digital multimeter with frequency measurement capability.
+
+**Measured results:**
+
+- Low-frequency oscillator: 298.6 Hz.
+- High-frequency oscillator: 12.08 kHz.
+
+These measurements confirm that the two oscillator circuits generate distinguishable frequency signals.
+
+The next verification stage consists of testing the complete optical transmission and reception path, followed by evaluating the selectivity and reliability of the receiver filters.
+
+## 7. Project Documentation and Media
+
+### 7.1 Project Concept
+
+An overview of the communication concept and its frequency-based operating principle.
+
+<p align="center">
+  <img src="Screenshot 2026-10-30 172940.png" alt="Project concept and frequency discrimination principle" width="850">
+</p>
+
+### 7.2 Circuit Schematic
+
+The electronic circuit was designed and documented using KiCad.
+
+<p align="center">
+  <img src="Screenshot 2026-08-11 185917.png" alt="KiCad electronic circuit schematic" width="950">
+</p>
 
 **Design files:** [`hardware/`](hardware/)
 
@@ -154,19 +194,25 @@ The use of active filters also provides the possibility of signal amplification 
 
 The high-pass and low-pass filter configurations used to separate the received frequency components.
 
-![Active filter design](images/active-filters.png)
+<p align="center">
+  <img src="images/active-filters.png" alt="Active high-pass and low-pass filter designs" width="900">
+</p>
 
 ### 7.4 Oscillator Implementation and Measurements
 
 Breadboard implementation and experimental frequency measurements.
 
-![Oscillator implementation](images/oscillator-experiment.jpg)
+<p align="center">
+  <img src="images/oscillator-experiment.png" alt="Oscillator implementation and measured frequencies" width="850">
+</p>
 
 ### 7.5 Infrared Transmitter and Receiver
 
 The infrared emitter and photosensitive receiver form the optical communication interface.
 
-![Infrared transmitter and receiver](images/infrared-interface.png)
+<p align="center">
+  <img src="images/infrared-interface.png" alt="Infrared LED and photosensitive receiver" width="850">
+</p>
 
 ### 7.6 Demonstration Video
 
@@ -205,7 +251,9 @@ Several improvements could extend the functionality and performance of this prot
 
 The system could be extended by assigning a unique frequency to each command and using a corresponding band-pass filter at the receiver.
 
-![Proposed band-pass filtering improvement](images/future-improvements.jpg)
+<p align="center">
+  <img src="images/future-improvements.jpg" alt="Proposed multi-channel communication using band-pass filters" width="850">
+</p>
 
 ## 10. Repository Structure
 
@@ -219,7 +267,7 @@ infrared-frequency-discrimination/
 │   ├── project-concept.jpg
 │   ├── kicad-schematic.png
 │   ├── active-filters.png
-│   ├── oscillator-experiment.jpg
+│   ├── oscillator-experiment.png
 │   ├── infrared-interface.png
 │   └── future-improvements.jpg
 │
