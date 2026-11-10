@@ -218,7 +218,7 @@ The infrared emitter and photosensitive receiver form the optical communication 
 
 A practical demonstration of the project, including signal generation, infrared transmission, reception, and output response.
 
-[▶ Watch the project demonstration](media/demo.mp4)
+[▶ Watch the project demonstration](video_2026-11-10_18-01-49y.mp4)
 
 ## 8. Tools and Components
 
