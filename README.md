@@ -195,7 +195,7 @@ The electronic circuit was designed and documented using KiCad.
 The high-pass and low-pass filter configurations used to separate the received frequency components.
 
 <p align="center">
-  <img src="images/active-filters.png" alt="Active high-pass and low-pass filter designs" width="900">
+  <img src="Screenshot 2026-10-30 172913.png" alt="Active high-pass and low-pass filter designs" width="900">
 </p>
 
 ### 7.4 Oscillator Implementation and Measurements
@@ -203,7 +203,7 @@ The high-pass and low-pass filter configurations used to separate the received f
 Breadboard implementation and experimental frequency measurements.
 
 <p align="center">
-  <img src="images/oscillator-experiment.png" alt="Oscillator implementation and measured frequencies" width="850">
+  <img src="Screenshot 2026-10-30 172923.png" alt="Oscillator implementation and measured frequencies" width="850">
 </p>
 
 ### 7.5 Infrared Transmitter and Receiver
@@ -211,7 +211,7 @@ Breadboard implementation and experimental frequency measurements.
 The infrared emitter and photosensitive receiver form the optical communication interface.
 
 <p align="center">
-  <img src="images/infrared-interface.png" alt="Infrared LED and photosensitive receiver" width="850">
+  <img src="Screenshot 2026-10-30 172931.png" alt="Infrared LED and photosensitive receiver" width="850">
 </p>
 
 ### 7.6 Demonstration Video
@@ -252,7 +252,7 @@ Several improvements could extend the functionality and performance of this prot
 The system could be extended by assigning a unique frequency to each command and using a corresponding band-pass filter at the receiver.
 
 <p align="center">
-  <img src="images/future-improvements.jpg" alt="Proposed multi-channel communication using band-pass filters" width="850">
+  <img src="photo_2026-10-30_17-27-55.jpg" alt="Proposed multi-channel communication using band-pass filters" width="850">
 </p>
 
 ## 10. Repository Structure
