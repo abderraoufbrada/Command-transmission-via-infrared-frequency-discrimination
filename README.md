@@ -101,6 +101,7 @@ The circuit is designed around the following functional blocks:
 | High-pass filter | Op-amp, resistors, capacitors | Detect the higher-frequency channel |
 | Indicators | LEDs and current-limiting resistors | Display the detected command |
 
+
 ### Oscillator Design
 
 The transmitter uses op-amp-based relaxation oscillators.
@@ -109,21 +110,21 @@ Their operating frequency depends on the timing capacitor and feedback resistor 
 
 The approximate oscillation period is:
 
-\[
-T=2RC\ln\left(\frac{1+\beta}{1-\beta}\right)
-\]
+$$
+T = 2RC \ln\left(\frac{1+\beta}{1-\beta}\right)
+$$
 
 where:
 
-\[
-\beta=\frac{R_2}{R_1+R_2}
-\]
+$$
+\beta = \frac{R_2}{R_1+R_2}
+$$
 
-and:
+The oscillation frequency is:
 
-\[
-f=\frac{1}{T}
-\]
+$$
+f = \frac{1}{T}
+$$
 
 The two oscillators were experimentally tested, producing the following measured frequencies:
 
@@ -138,48 +139,14 @@ The receiver employs active high-pass and low-pass filtering stages.
 
 The cutoff frequency of a first-order RC filter is:
 
-\[
-f_c=\frac{1}{2\pi RC}
-\]
+$$
+f_c = \frac{1}{2\pi RC}
+$$
 
 The cutoff frequencies must be selected to separate the two operating frequencies while providing sufficient attenuation of unwanted signals.
 
 The use of active filters also provides the possibility of signal amplification and buffering.
 
-## 5. Hardware Implementation
-
-The circuits were initially assembled and tested on a breadboard.
-
-The experimental setup includes the oscillator circuits, infrared transmitter and receiver, signal-conditioning stages, and output indicators.
-
-The project focuses on understanding the behavior of each functional block and verifying the frequency discrimination principle through practical measurements.
-
-## 6. Experimental Results
-
-The oscillator frequencies were measured using a digital multimeter with frequency measurement capability.
-
-**Measured results:**
-
-- Low-frequency oscillator: 298.6 Hz.
-- High-frequency oscillator: 12.08 kHz.
-
-These measurements confirm that the two oscillator circuits generate distinguishable frequency signals.
-
-The next verification stage consists of testing the complete optical transmission and reception path, followed by evaluating the selectivity and reliability of the receiver filters.
-
-## 7. Project Documentation and Media
-
-### 7.1 Project Concept
-
-An overview of the communication concept and its frequency-based operating principle.
-
-![Project concept](Screenshot 2026-10-30 172940.png)
-
-### 7.2 Circuit Schematic
-
-The electronic circuit was designed and documented using KiCad.
-
-![KiCad schematic](Screenshot 2026-08-11 185917.png)
 
 **Design files:** [`hardware/`](hardware/)
 
